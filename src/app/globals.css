@@ -200,3 +200,12 @@
 * {
     border-radius: 0px !important;
 }
+
+@font-face {
+    font-family: Fira-Code;
+    src: url("/fonts/FiraCode-Regular.ttf");
+}
+
+@theme {
+    --font-fira: Fira-Code, "sans-serif";
+}

@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Geist } from "next/font/google";
-import { cn } from "@/lib/utils";
+// import { Geist } from "next/font/google";
+// import { cn } from "@/lib/utils";
 import AsideNav from "@/components/navigation/aside-nav";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { ThemeProvider } from "@/components/theme-provider";
 
-const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
+// const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,10 +17,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={cn("h-full", "font-sans", geist.variable)}
+      // className={cn("h-full", "font-sans", geist.variable)}
+      className="h-full"
       suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col font-fira">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

@@ -14,7 +14,7 @@ export default function LogoHeader() {
           width={1980}
           height={1080}
           alt="logo.png"
-          className="aspect-square scale-200 object-cover"
+          className="aspect-square scale-x-125 object-cover"
         />
       </Link>
     </Card>

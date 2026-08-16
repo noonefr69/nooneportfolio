@@ -17,7 +17,7 @@ export default function Home() {
           </Link>
         </Button>
         <video
-          className="w-16 object-cover my-6 h-10 hover:ring"
+          className="w-16 object-cover my-6 h-10 hover:scale-95 duration-100"
           muted
           autoPlay
           loop
