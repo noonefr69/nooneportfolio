@@ -37,7 +37,7 @@ export default function Home() {
               >
                 <Image
                   src={`/telegram.svg`}
-                  alt="github"
+                  alt="telegram"
                   width={16}
                   height={16}
                 />
