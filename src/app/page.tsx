@@ -62,10 +62,10 @@ export default function Home() {
           </div>
         </div>
         <div className="col-span-6 lg:col-span-2 flex flex-col relative">
-          <span className="absolute bottom-8 lg:left-0 sm:left-1/4 left-0 -rotate-45">
+          <span className="absolute top-8 lg:right-2 sm:right-1/4 right-2 rotate-130">
             <RedoIcon />
           </span>
-          <span className="absolute bottom-0 lg:left-0 sm:left-1/4 left-0">
+          <span className="absolute top-0 lg:right-4 sm:right-1/4 right-2">
             Me
           </span>
           <Image
