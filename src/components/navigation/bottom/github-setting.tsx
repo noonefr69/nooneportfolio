@@ -15,29 +15,16 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { Button } from "@/components/ui/button";
 
 export default function GithubSetting() {
   return (
     <Card className="flex flex-col items-center justify-between w-16 bg-transparent">
       <Tooltip>
         <TooltipTrigger className="hover:scale-95 duration-100">
-          <Link
-            href={`https://github.com/noonefr69`}
-            target="_blank"
-            className="h-full w-full flex items-center justify-center"
-          >
-            <Image
-              src={`/github.svg`}
-              width={1980}
-              height={1080}
-              alt="logo.png"
-              className="aspect-square max-w-6 object-cover"
-            />
-          </Link>
+          <div className="w-6 h-6 rounded-full! bg-primary" />
         </TooltipTrigger>
         <TooltipContent side="left">
-          <p>{"GitHub"}</p>
+          <p>{"Color"}</p>
         </TooltipContent>
       </Tooltip>
       <Dialog>
