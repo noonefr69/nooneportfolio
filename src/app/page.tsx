@@ -1,6 +1,6 @@
 import LilNavigator from "@/components/navigation/lil-navigator";
 import { Button } from "@/components/ui/button";
-import { RedoIcon } from "lucide-react";
+import { CodeXmlIcon, RedoIcon } from "lucide-react";
 import { Pixelify_Sans } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
@@ -62,18 +62,21 @@ export default function Home() {
           </div>
         </div>
         <div className="col-span-6 lg:col-span-2 flex flex-col relative">
-          <span className="absolute top-8 lg:right-2 sm:right-1/4 right-2 rotate-130">
+          <span className="absolute top-8 lg:right-2 sm:right-1/4 right-2 duration-100 hover:rotate-140 hover:scale-110 rotate-130">
             <RedoIcon />
           </span>
-          <span className="absolute top-0 lg:right-4 sm:right-1/4 right-2">
+          <span className="absolute top-0 lg:right-4 sm:right-1/4 right-2 duration-100 hover:-rotate-12">
             Me
+          </span>
+          <span className="absolute bottom-6 sm:left-1/4 left-4 lg:left-6 hover:rotate-12 hover:scale-110 duration-100 -rotate-12">
+            <CodeXmlIcon />
           </span>
           <Image
             src={`/me.jpg`}
             alt="me.JPG"
             width={1980}
             height={1080}
-            className="sm:w-1/2 lg:w-full mx-auto scale-75 shadow-[10px_10px_0px_0px_black] dark:shadow-[10px_10px_0px_0px_#f2eede]"
+            className="sm:w-1/2 lg:w-full mx-auto scale-75 hover:shadow-none hover:scale-73 dark:hover:shadow-none duration-100 shadow-[10px_10px_0px_0px_black] dark:shadow-[10px_10px_0px_0px_#f2eede]"
           />
         </div>
       </div>
