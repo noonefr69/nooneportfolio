@@ -4,6 +4,7 @@ import { Geist } from "next/font/google";
 import { cn } from "@/lib/utils";
 import AsideNav from "@/components/navigation/aside-nav";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { ThemeProvider } from "@/components/theme-provider";
 
 const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -14,16 +15,27 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={cn("h-full", "font-sans", geist.variable)}>
+    <html
+      lang="en"
+      className={cn("h-full", "font-sans", geist.variable)}
+      suppressHydrationWarning
+    >
       <body className="min-h-full flex flex-col">
-        <TooltipProvider>
-          <main className="flex gap-2 max-w-7xl min-w-0 w-full mx-auto">
-            <div className="flex-1 min-w-0">{children}</div>
-            <aside className="hidden lg:flex flex-col items-center shrink-0 p-10">
-              <AsideNav />
-            </aside>
-          </main>
-        </TooltipProvider>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <TooltipProvider>
+            <main className="flex gap-2 max-w-7xl min-w-0 w-full mx-auto">
+              <div className="flex-1 min-w-0">{children}</div>
+              <aside className="hidden lg:flex flex-col items-center shrink-0 p-10">
+                <AsideNav />
+              </aside>
+            </main>
+          </TooltipProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
