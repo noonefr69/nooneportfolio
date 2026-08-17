@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ActivityCalendar } from "react-activity-calendar";
-import { BirdIcon, CatIcon, SnailIcon } from "lucide-react";
+import { BirdIcon, SnailIcon } from "lucide-react";
 
 type Activity = {
   date: string;
