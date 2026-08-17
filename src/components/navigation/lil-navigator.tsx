@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function LilNavigator() {
   return (
-    <Card className="h-16 bg-transparent w-fit gap-2 px-4 hidden lg:flex flex-row items-center mt-6">
+    <Card className="min-h-16 bg-transparent w-fit gap-2 px-4 hidden lg:flex flex-row items-center mt-6">
       <ToggleTheme />
       <Button variant={"ghost"} size={"sm"} asChild>
         <Link
