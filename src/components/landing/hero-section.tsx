@@ -6,7 +6,6 @@ import Link from "next/link";
 
 const pixelifySans = Pixelify_Sans({
   subsets: ["latin"],
-  display: "swap",
 });
 
 export default function HeroSection() {
@@ -14,7 +13,7 @@ export default function HeroSection() {
     <div className="grid grid-cols-6 gap-4 mt-16">
       <div className="col-span-6 lg:col-span-4">
         <h1
-          className={`text-xl md:text-3xl lg:text-4xl font-semibold lg:font-extrabold lg:text-start text-center ${pixelifySans.className}`}
+          className={`text-xl md:text-3xl lg:text-4xl font-semibold lg:font-bold lg:text-start text-center ${pixelifySans.className}`}
         >
           Senior front-end engineer {`(nope, I'm junior/mid-level)`} with a lot
           of passion for computers, who likes FOSS and Linux.
@@ -37,6 +36,7 @@ export default function HeroSection() {
                 alt="telegram"
                 width={16}
                 height={16}
+                className="dark:invert"
               />
               Telegram
             </Link>
@@ -47,7 +47,13 @@ export default function HeroSection() {
               href={`https://github.com/noonefr69`}
               target="_blank"
             >
-              <Image src={`/github.svg`} alt="github" width={16} height={16} />
+              <Image
+                src={`/github.svg`}
+                alt="github"
+                width={16}
+                height={16}
+                className="dark:invert"
+              />
               GitHub
             </Link>
           </Button>
