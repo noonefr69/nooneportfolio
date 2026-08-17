@@ -4,9 +4,7 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { SettingsIcon } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
+import { FaceSlightlyFrowningIcon, SettingsIcon } from "lucide-react";
 import {
   Dialog,
   DialogContent,
@@ -16,7 +14,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 
-export default function GithubSetting() {
+export default function Settings() {
   return (
     <Card className="flex flex-col items-center justify-between w-16 bg-transparent">
       <Tooltip>
@@ -42,10 +40,11 @@ export default function GithubSetting() {
         </Tooltip>
         <DialogContent>
           <DialogHeader>
-            <DialogTitle>Are you absolutely sure?</DialogTitle>
+            <DialogTitle className="flex items-center gap-2">
+              Help me <FaceSlightlyFrowningIcon />
+            </DialogTitle>
             <DialogDescription>
-              This action cannot be undone. This will permanently delete your
-              account and remove your data from our servers.
+              I don{`'`}t know what should I put here :)
             </DialogDescription>
           </DialogHeader>
         </DialogContent>

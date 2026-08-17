@@ -1,6 +1,6 @@
 import NavLinks from "./mid/nav-links";
 import LogoHeader from "./top/logo-header";
-import GithubSetting from "./bottom/github-setting";
+import GithubSetting from "./bottom/settings";
 
 export default function AsideNav() {
   return (
