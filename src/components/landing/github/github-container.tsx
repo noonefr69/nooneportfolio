@@ -39,7 +39,7 @@ export default function GitHubContainer() {
   );
 
   return (
-    <section className="mt-8">
+    <section className="mt-10">
       <h1 className="text-lg sm:text-2xl lg:text-3xl font-extrabold mb-6">
         Contribution Graph{" "}
         <span className="lg:text-xl text-muted-foreground opacity-60">
