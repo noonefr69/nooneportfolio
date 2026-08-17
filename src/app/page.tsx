@@ -7,12 +7,9 @@ export default function Home() {
       <LilNavigator />
       <HeroSection />
 
-      {/*<Image
-        src="https://ghchart.rshah.org/noonefr69"
-        alt="github action chart"
-        width={1980}
-        height={1080}
-      />*/}
+      <section className="mt-8">
+        <h1 className="lg:text-3xl font-extrabold">Contribution Graph</h1>
+      </section>
     </div>
   );
 }
