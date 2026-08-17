@@ -109,9 +109,9 @@ export default function GitHubContainer() {
             .map((y) => (
               <Button
                 key={y}
-                className="flex-1 font-bold"
+                className="flex-1 font-bold transition-none"
                 onClick={() => setYear(y)}
-                // variant={(year === y ? "default" : "outline") ?? "outline"}
+                variant={year === y ? "default" : "outline"}
               >
                 {y}
               </Button>
