@@ -11,7 +11,7 @@ export default function Quote() {
           alt="tyler"
           width={1980}
           height={1080}
-          className="object-cover w-16 h-10 duration-100 hover:scale-95 border-2 border-primary"
+          className="object-cover w-16 h-10 duration-100 hover:scale-95"
         />
       </span>
     </p>
