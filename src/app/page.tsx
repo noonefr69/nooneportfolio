@@ -8,6 +8,19 @@ export default function Home() {
       <LilNavigator />
       <HeroSection />
       <GitHubContainer />
+
+      <section className="mt-8 grid lg:grid-cols-2">
+        <div>
+          <h1 className="text-lg sm:text-xl lg:text-2xl mb-4 font-semibold">
+            Projects
+          </h1>
+        </div>
+        <div className="flex flex-col">
+          <h1 className="text-lg sm:text-xl lg:text-2xl mb-4 font-semibold">
+            Work EXP
+          </h1>
+        </div>
+      </section>
     </div>
   );
 }
