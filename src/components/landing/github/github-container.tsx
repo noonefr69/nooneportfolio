@@ -16,6 +16,8 @@ type Activity = {
 
 export default function GitHubContainer() {
   const currentYear = new Date().getFullYear();
+  const currentMonth = new Date().getMonth();
+  const currentDay = new Date().getDate();
   const [year, setYear] = useState(currentYear);
   const [data, setData] = useState<Activity[]>([]);
   const [loading, setLoading] = useState(true);
@@ -39,15 +41,26 @@ export default function GitHubContainer() {
   return (
     <section className="mt-8">
       <h1 className="text-lg sm:text-2xl lg:text-3xl font-extrabold mb-6">
-        Contribution Graph
+        Contribution Graph{" "}
+        <span className="lg:text-xl text-muted-foreground opacity-60">
+          (
+          {`${currentYear}/${(currentMonth + 1).toLocaleString().padStart(2, "0")}/${currentDay.toLocaleString().padStart(2, "0")}`}
+          )
+        </span>
       </h1>
       <div className="flex gap-4">
         <Card className="relative min-w-0 overflow-visible flex-1 min-h-56 justify-center ">
-          <span className="absolute left-4 bottom-0">
-            <SnailIcon />
+          <span className="absolute flex items-end gap-2 group left-4 bottom-0 duration-100 hover:left-5">
+            <SnailIcon className="group-hover:rotate-6 duration-200" />
+            <i className="text-sm group-hover:opacity-100 opacity-0 duration-200">
+              Turbo!
+            </i>
           </span>
-          <span className="absolute -top-6 right-0 -scale-x-90">
-            <BirdIcon />
+          <span className="absolute flex items-start gap-2 group right-2 -top-6 duration-100 hover:right-3">
+            <i className="text-sm group-hover:-rotate-3 group-hover:opacity-100 opacity-0 duration-200">
+              Jick Jick
+            </i>
+            <BirdIcon className="group-hover:rotate-6 duration-200 -scale-x-90" />
           </span>
           <CardContent className="pt-6 flex items-center justify-center">
             {loading ? (
