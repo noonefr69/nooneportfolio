@@ -8,9 +8,9 @@ export default function Projects() {
         Projects
       </h1>
       <ul className="border-l flex flex-col gap-4 relative py-4 ml-5 lg:ml-6">
-        <li className="flex flex-col">
+        <li className="flex flex-col group">
           <div className="flex items-center">
-            <span className="shrink-0 duration-100 hover:scale-95 bg-primary font-bold text-secondary relative -left-6 w-12 h-12 flex items-center justify-center">
+            <span className="group-hover:bg-secondary group-hover:text-primary border shrink-0 duration-100 hover:scale-95 bg-primary font-bold text-secondary relative -left-6 w-12 h-12 flex items-center justify-center">
               1
             </span>
             <div className="flex flex-col items-start relative -left-1">
@@ -41,9 +41,9 @@ export default function Projects() {
             </p>
           </div>
         </li>
-        <li className="flex flex-col">
+        <li className="flex flex-col group">
           <div className="flex items-center">
-            <span className="shrink-0 duration-100 hover:scale-95 bg-primary font-bold text-secondary relative -left-6 w-12 h-12 flex items-center justify-center">
+            <span className="group-hover:bg-secondary group-hover:text-primary border shrink-0 duration-100 hover:scale-95 bg-primary font-bold text-secondary relative -left-6 w-12 h-12 flex items-center justify-center">
               2
             </span>
             <div className="flex flex-col items-start relative -left-1">
@@ -73,9 +73,9 @@ export default function Projects() {
             </p>
           </div>
         </li>
-        <li className="flex flex-col">
+        <li className="flex flex-col group">
           <div className="flex items-center">
-            <span className="shrink-0 duration-100 hover:scale-95 bg-primary font-bold text-secondary relative -left-6 w-12 h-12 flex items-center justify-center">
+            <span className="group-hover:bg-secondary group-hover:text-primary border shrink-0 duration-100 hover:scale-95 bg-primary font-bold text-secondary relative -left-6 w-12 h-12 flex items-center justify-center">
               3
             </span>
             <div className="flex flex-col items-start relative -left-1">
