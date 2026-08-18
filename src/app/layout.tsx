@@ -4,6 +4,7 @@ import "./globals.css";
 import AsideNav from "@/components/navigation/aside-nav";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { ThemeProvider } from "@/components/theme-provider";
+import LilNavigator from "@/components/navigation/lil-navigator";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -30,7 +31,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         >
           <TooltipProvider>
             <main className="flex gap-2 max-w-7xl min-w-0 w-full mx-auto">
-              <div className="flex-1 min-w-0">{children}</div>
+              <div className="flex-1 min-w-0">
+                <LilNavigator />
+                {children}
+              </div>
               <aside className="hidden lg:flex flex-col items-center shrink-0 p-10">
                 <AsideNav />
               </aside>

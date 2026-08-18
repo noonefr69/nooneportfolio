@@ -1,5 +1,4 @@
 import HeroSection from "@/components/landing/hero-section";
-import LilNavigator from "@/components/navigation/lil-navigator";
 import GitHubContainer from "@/components/landing/github/github-container";
 import ExpSection from "@/components/landing/experiment/exp";
 import FooterSection from "@/components/landing/footer-section/footer";
@@ -7,7 +6,6 @@ import FooterSection from "@/components/landing/footer-section/footer";
 export default function Home() {
   return (
     <div className="flex flex-col min-h-svh h-400 gap-4 p-2">
-      <LilNavigator />
       <HeroSection />
       <GitHubContainer />
       <ExpSection />
