@@ -1,0 +1,77 @@
+export const techIUse = [
+  {
+    _id: 1,
+    icon: "/techs/js.svg",
+    label: "JavaScript",
+    description: "Language",
+  },
+  {
+    _id: 2,
+    icon: "/techs/ts.svg",
+    label: "TypeScript",
+    description: "Typed superset",
+  },
+  {
+    _id: 3,
+    icon: "/techs/react.svg",
+    label: "React",
+    description: "UI library",
+  },
+  {
+    _id: 4,
+    icon: "/techs/nextjs.svg",
+    label: "Next.js",
+    description: "React framework",
+  },
+  { _id: 15, icon: "/techs/vim.svg", label: "Vim", description: "Text editor" },
+  {
+    _id: 5,
+    icon: "/techs/zustand.svg",
+    label: "Zustand",
+    description: "State management",
+  },
+  {
+    _id: 13,
+    icon: "/techs/tailwindcss.svg",
+    label: "TailwindCSS",
+    description: "CSS framework",
+  },
+  {
+    _id: 9,
+    icon: "/techs/mongodb.svg",
+    label: "MongoDB",
+    description: "Database",
+  },
+  {
+    _id: 10,
+    icon: "/techs/mongoose.svg",
+    label: "Mongoose",
+    description: "ODM",
+  },
+  {
+    _id: 14,
+    icon: "/techs/vercel.svg",
+    label: "Vercel",
+    description: "Deployment",
+  },
+  {
+    _id: 12,
+    icon: "/techs/shadcn.svg",
+    label: "shadcn/ui",
+    description: "Component library",
+  },
+  {
+    _id: 11,
+    icon: "/techs/pnpm.svg",
+    label: "pnpm",
+    description: "Package manager",
+  },
+  {
+    _id: 7,
+    icon: "/techs/git.svg",
+    label: "Git",
+    description: "Version control",
+  },
+  { _id: 8, icon: "/techs/html.svg", label: "HTML", description: "Markup" },
+  { _id: 6, icon: "/techs/css.svg", label: "CSS", description: "Styling" },
+];

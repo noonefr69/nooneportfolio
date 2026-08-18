@@ -15,7 +15,7 @@ export default function Mades() {
         >
           <Link href={`https://vercel.com`} target="_blank">
             <Image
-              src={`/vercel.svg`}
+              src={`/techs/vercel.svg`}
               alt="vercel.svg"
               width={1980}
               height={1080}
@@ -27,7 +27,7 @@ export default function Mades() {
         <Button asChild variant={"outline"}>
           <Link href={`https://nextjs.org`} target="_blank">
             <Image
-              src={`/nextjs.svg`}
+              src={`/techs/nextjs.svg`}
               alt="nextjs.svg"
               width={1980}
               height={1080}
@@ -44,7 +44,7 @@ export default function Mades() {
         >
           <Link href={`https://tailwindcss.com`} target="_blank">
             <Image
-              src={`/tailwindcss.svg`}
+              src={`/techs/tailwindcss.svg`}
               alt="tailwindcss.svg"
               width={1980}
               height={1080}
