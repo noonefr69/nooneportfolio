@@ -5,7 +5,7 @@ import FooterSection from "@/components/landing/footer-section/footer";
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-svh h-400 gap-4 p-2">
+    <div className="flex flex-col gap-4 p-2">
       <HeroSection />
       <GitHubContainer />
       <ExpSection />
