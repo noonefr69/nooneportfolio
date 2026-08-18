@@ -12,6 +12,30 @@ function getLevel(count: number): 0 | 1 | 2 | 3 | 4 {
   return 4;
 }
 
+// Define types for the GitHub GraphQL response
+interface GitHubContributionDay {
+  contributionCount: number;
+  date: string;
+}
+
+interface GitHubContributionWeek {
+  contributionDays: GitHubContributionDay[];
+}
+
+interface GitHubGraphQLResponse {
+  data?: {
+    user: {
+      contributionsCollection: {
+        contributionCalendar: {
+          totalContributions: number;
+          weeks: GitHubContributionWeek[];
+        };
+      };
+    } | null;
+  };
+  errors?: { message: string }[];
+}
+
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
   const year = searchParams.get("year") || new Date().getFullYear().toString();
@@ -60,7 +84,7 @@ export async function GET(request: Request) {
       );
     }
 
-    const json = await res.json();
+    const json = (await res.json()) as GitHubGraphQLResponse;
 
     if (json.errors) {
       return NextResponse.json(
@@ -69,14 +93,14 @@ export async function GET(request: Request) {
       );
     }
 
-    // Flatten the weeks into a single array of days
-    const days =
-      json.data.user.contributionsCollection.contributionCalendar.weeks.flatMap(
-        (week: any) => week.contributionDays,
-      );
+    // Flatten the weeks into a single array of days safely
+    const weeks =
+      json.data?.user?.contributionsCollection?.contributionCalendar?.weeks ??
+      [];
+    const days = weeks.flatMap((week) => week.contributionDays);
 
     // Map to the format required by react-activity-calendar
-    const data = days.map((day: any) => ({
+    const data = days.map((day) => ({
       date: day.date.split("T")[0], // "2024-01-01T00:00:00Z" -> "2024-01-01"
       count: day.contributionCount,
       level: getLevel(day.contributionCount),
@@ -84,6 +108,9 @@ export async function GET(request: Request) {
 
     return NextResponse.json(data);
   } catch (error) {
-    return NextResponse.json({ error: "Server error" }, { status: 500 });
+    return NextResponse.json(
+      { error: "Server error" + error },
+      { status: 500 },
+    );
   }
 }
