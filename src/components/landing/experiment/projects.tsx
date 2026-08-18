@@ -56,7 +56,7 @@ export default function Projects() {
                 className="opacity-60 duration-100 lg:text-xs text-[10px] hover:opacity-100 p-0 underline"
               >
                 <Link href={`https://wtia.vercel.app/`} target="_blank">
-                  https://wtia.vercel.app
+                  wtia.vercel.app
                 </Link>
               </Button>
             </div>
@@ -88,7 +88,7 @@ export default function Projects() {
                 className="opacity-60 duration-100 lg:text-xs text-[10px] hover:opacity-100 p-0 underline"
               >
                 <Link href={`https://twit-drab.vercel.app`} target="_blank">
-                  https://twit-drab.vercel.app
+                  twit-drab.vercel.app
                 </Link>
               </Button>
             </div>

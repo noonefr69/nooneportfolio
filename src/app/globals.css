@@ -193,6 +193,21 @@
     html {
         @apply font-sans;
     }
+
+    :root {
+        --selection-bg: var(--paper-foreground);
+        --selection-fg: var(--paper-background);
+    }
+
+    .dark {
+        --selection-bg: var(--paper-background);
+        --selection-fg: var(--paper-foreground);
+    }
+}
+
+::selection {
+    background-color: var(--selection-bg);
+    color: var(--selection-fg);
 }
 
 /* my custom css */
