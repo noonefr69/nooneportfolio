@@ -205,13 +205,23 @@
     }
 }
 
+/* my custom css */
+
+* {
+    border-radius: 0px !important;
+}
+
 ::selection {
     background-color: var(--selection-bg);
     color: var(--selection-fg);
 }
 
-/* my custom css */
+/* Hide scrollbar for a specific container */
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
 
-* {
-    border-radius: 0px !important;
+/* Or hide all scrollbars globally */
+*::-webkit-scrollbar {
+    display: none;
 }

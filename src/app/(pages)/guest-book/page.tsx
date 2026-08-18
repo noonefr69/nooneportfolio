@@ -1,3 +1,3 @@
 export default function GuestBook() {
-  return <div>guest book</div>;
+  return <div className="">Guest book</div>;
 }

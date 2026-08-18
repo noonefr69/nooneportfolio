@@ -1,3 +1,3 @@
 export default function AboutMe() {
-  return <div>whoami</div>;
+  return <div className="flex flex-col gap-4">whoami</div>;
 }
