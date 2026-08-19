@@ -47,7 +47,7 @@ export default async function GuestBook() {
                 <Input
                   type="text"
                   placeholder="username"
-                  className="h-8 max-w-[120px] text-sm"
+                  className="h-8 max-w-[120px] text-sm focus-visible:ring-0"
                 />
                 <label className="flex items-center gap-2 text-xs text-muted-foreground cursor-pointer select-none">
                   <Input
@@ -63,7 +63,7 @@ export default async function GuestBook() {
                 <Input
                   type="text"
                   placeholder="type a message..."
-                  className="h-8 flex-1 text-sm"
+                  className="h-8 flex-1 text-sm focus-visible:ring-0"
                 />
                 <Button variant="outline" size="sm" className="h-8 text-sm">
                   send -&gt;
