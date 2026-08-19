@@ -8,13 +8,13 @@ export const techIUse = [
   {
     _id: 3,
     icon: "/techs/react.svg",
-    label: "React",
+    label: "ReactJs",
     description: "UI library",
   },
   {
     _id: 4,
     icon: "/techs/nextjs.svg",
-    label: "Next.js",
+    label: "NextJs",
     description: "React framework",
   },
   {

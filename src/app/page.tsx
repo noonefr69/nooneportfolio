@@ -9,7 +9,6 @@ export default function Home() {
       <HeroSection />
       <GitHubContainer />
       <ExpSection />
-      <FooterSection />
     </div>
   );
 }
