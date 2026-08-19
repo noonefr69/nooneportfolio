@@ -32,7 +32,7 @@ export default function HeroSection() {
               target="_blank"
             >
               <Image
-                src={`/telegram.svg`}
+                src={`/socials/telegram.svg`}
                 alt="telegram"
                 width={16}
                 height={16}
@@ -48,13 +48,29 @@ export default function HeroSection() {
               target="_blank"
             >
               <Image
-                src={`/github.svg`}
+                src={`/socials/github.svg`}
                 alt="github"
                 width={16}
                 height={16}
                 className="dark:invert"
               />
               GitHub
+            </Link>
+          </Button>
+          <Button asChild size={"lg"} variant={"secondary"}>
+            <Link
+              className="flex items-center"
+              href={`https://pin.it/7suieUJXH`}
+              target="_blank"
+            >
+              <Image
+                src={`/socials/pinterest.svg`}
+                alt="github"
+                width={16}
+                height={16}
+                className="dark:invert"
+              />
+              Pinterest
             </Link>
           </Button>
         </div>
