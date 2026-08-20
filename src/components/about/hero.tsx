@@ -20,8 +20,20 @@ export default function AboutHero() {
         >
           Kasra M. Hosseini
         </h2>
-        <h3 className="mt-2 mb-4 lg:mb-0 flex items-center gap-2 text-base md:text-lg lg:text-xl font-semibold lg:font-bold lg:text-start text-center ${pixelifySans.className}">
-          <MapPinIcon /> Iran, East Azerbaijan, Tabriz
+        <h3
+          className={`mt-2 mb-4 lg:mb-0 flex items-center gap-1 text-base md:text-lg lg:text-xl font-semibold lg:font-bold lg:text-start text-center ${pixelifySans.className}`}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            className="w-6 aspect-square text-black dark:text-[#f2eede]"
+            role="img"
+            aria-label="pin"
+          >
+            <path d="M13 23h-2v-2h2v2Zm-2-2H9v-2h2v2Zm4 0h-2v-2h2v2Zm-6-2H7v-2h2v2Zm8 0h-2v-2h2v2ZM7 17H5v-3h2v3Zm12 0h-2v-3h2v3ZM5 14H3V6h2v8Zm9 0h-4v-2h4v2Zm7 0h-2V6h2v8Zm-11-2H8V8h2v4Zm6 0h-2V8h2v4Zm-2-4h-4V6h4v2ZM7 6H5V4h2v2Zm12 0h-2V4h2v2Zm-2-2H7V2h10v2Z" />
+          </svg>
+          Iran, East Azerbaijan, Tabriz
         </h3>
         <p className="lg:text-base text-sm mt-2 text-muted-foreground">
           I don’t have much to say about myself, but at least I know that I’m a

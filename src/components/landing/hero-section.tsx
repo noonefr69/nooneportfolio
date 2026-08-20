@@ -15,9 +15,9 @@ export default function HeroSection() {
         <h1
           className={`text-xl md:text-3xl lg:text-4xl font-semibold lg:font-bold lg:text-start text-center ${pixelifySans.className}`}
         >
-          Senior front-end engineer with a lot of la passion for computers, who
-          likes FOSS and Linux.
-          <span className="font-mono text-sm text-muted-foreground">{`(don't tell anyone but I'm mid level >-<)`}</span>
+          Senior front-end engineer with a lot of la passion for computers, FOSS
+          and Linux.
+          <span className="font-mono text-xs lg:text-sm text-muted-foreground block">{`(don't tell anyone but I'm mid level >-<)`}</span>
         </h1>
 
         <p className="mt-8 lg:text-start text-center">
