@@ -11,9 +11,9 @@ export default function AboutHero() {
     <section className="grid lg:grid-cols-6 gap-4">
       <div className="lg:col-span-4">
         <h1
-          className={`text-xl md:text-3xl lg:text-4xl font-semibold lg:font-bold ${pixelifySans.className}`}
+          className={`flex items-center text-xl md:text-3xl lg:text-4xl font-semibold lg:font-bold ${pixelifySans.className}`}
         >
-          ~$ whoami?
+          <span className="font-thin text-3xl lg:text-5xl">~</span>$ whoami?
         </h1>
         <h2
           className={`text-2xl md:text-4xl lg:text-5xl font-semibold lg:font-bold ${pixelifySans.className}`}
