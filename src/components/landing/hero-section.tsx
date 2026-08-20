@@ -13,6 +13,7 @@ export default function HeroSection() {
     <div className="grid grid-cols-6 gap-4 mt-16">
       <div className="col-span-6 lg:col-span-4">
         <h1
+          id="socials"
           className={`text-xl md:text-3xl lg:text-4xl font-semibold lg:font-bold lg:text-start text-center ${pixelifySans.className}`}
         >
           Senior front-end engineer with a lot of la passion for computers, FOSS
