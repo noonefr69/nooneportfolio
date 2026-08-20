@@ -15,9 +15,11 @@ export default function HeroSection() {
         <h1
           className={`text-xl md:text-3xl lg:text-4xl font-semibold lg:font-bold lg:text-start text-center ${pixelifySans.className}`}
         >
-          Senior front-end engineer {`(nope, I'm junior/mid-level)`} with a lot
-          of la passion for computers, who likes FOSS and Linux.
+          Senior front-end engineer with a lot of la passion for computers, who
+          likes FOSS and Linux.
+          <span className="font-mono text-sm text-muted-foreground">{`(don't tell anyone but I'm mid level >-<)`}</span>
         </h1>
+
         <p className="mt-8 lg:text-start text-center">
           I{`'`}m Kasra M. Hosseini, early 20s. Started coding at 16 to land a
           job by 18, but life threw wars and internet blackouts my way. Still
@@ -73,6 +75,22 @@ export default function HeroSection() {
               Pinterest
             </Link>
           </Button>
+          <Button asChild size={"lg"} variant={"secondary"}>
+            <Link
+              className="flex items-center"
+              href={`https://x.com/noonefr69`}
+              target="_blank"
+            >
+              <Image
+                src={`/socials/xicon.svg`}
+                alt="github"
+                width={16}
+                height={16}
+                className="dark:invert"
+              />
+              Twitter
+            </Link>
+          </Button>
         </div>
       </div>
       <div className="col-span-6 lg:col-span-2 flex flex-col relative">
@@ -86,7 +104,7 @@ export default function HeroSection() {
           <CodeXmlIcon />
         </span>
         <Image
-          src={`/me.jpg`}
+          src={`/me.JPG`}
           alt="me.JPG"
           width={1980}
           height={1080}
