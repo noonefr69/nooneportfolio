@@ -41,17 +41,15 @@ export default async function GuestBook() {
             <div className="flex-1 overflow-y-auto overflow-x-hidden text-sm pr-2">
               {/* Dummy Message 1 */}
 
-              <div className="duration-100 hover:bg-accent py-2 relative group text-justify hover:px-2 cursor-default space-x-2 overflow-hidden truncate">
+              <div className="group duration-100 hover:bg-accent cursor-default flex gap-2 py-2 hover:px-2 items-baseline">
                 <span className="text-xs shrink-0 text-muted-foreground">
-                  8/20/2026 14:14
+                  8/20/2026 12:12
                 </span>
-                <span className="text-primary font-bold inline">noone:</span>
-                <p className="text-foreground inline whitespace-break-spaces">
-                  hi
+                <span className="text-primary font-bold">noone</span>
+                <p className="w-full flex items-center justify-between text-foreground whitespace-break-spaces text-justify truncate">
+                  hi, no sign-in required. please be nice :)
+                  <PinIcon className="group-hover:rotate-45 sm:flex hidden duration-100 size-4 rotate-0" />
                 </p>
-                <span className="rotate-45 absolute right-0 top-1/2 -translate-y-1/2 group-hover:right-2 duration-100">
-                  <PinIcon className="size-4" />
-                </span>
               </div>
               {guestbookMsgs.map((msg) => (
                 <GuestbookMessage msg={msg} key={msg._id} />
