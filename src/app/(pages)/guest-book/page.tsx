@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import GuestbookForm from "@/components/guestbook/form";
+import GuestbookMessage from "@/components/guestbook/message";
 
 export default async function GuestBook() {
   const res = await fetch(`${process.env.APP_URL}/api/guestbook`, {
@@ -10,7 +11,8 @@ export default async function GuestBook() {
     throw new Error("Failed to fetch guestbook");
   }
 
-  const users = await res.json();
+  const guestbookMsgs = await res.json();
+  // console.log(guestbookMsgs);
 
   return (
     <div className="mt-20">
@@ -35,15 +37,11 @@ export default async function GuestBook() {
               </pre>
             </div>
             {/* Messages Area */}
-            <div className="flex-1 overflow-y-auto space-y-3 text-sm pr-2">
+            <div className="flex-1 overflow-y-auto overflow-x-hidden text-sm pr-2">
               {/* Dummy Message 1 */}
-              <div className="flex gap-2 items-baseline">
-                <span className="text-xs text-muted-foreground">14:02</span>
-                <span className="text-primary font-bold">anon_1</span>
-                <span className="text-foreground">
-                  Love this minimal setup.
-                </span>
-              </div>
+              {guestbookMsgs.map((msg) => (
+                <GuestbookMessage msg={msg} key={msg._id} />
+              ))}
             </div>
             <GuestbookForm />
           </CardContent>
