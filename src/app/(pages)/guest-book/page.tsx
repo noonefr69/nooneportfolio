@@ -1,7 +1,17 @@
 import { Card, CardContent } from "@/components/ui/card";
 import GuestbookForm from "@/components/guestbook/form";
 
-export default function GuestBook() {
+export default async function GuestBook() {
+  const res = await fetch(`${process.env.APP_URL}/api/guestbook`, {
+    cache: "no-store",
+  });
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch guestbook");
+  }
+
+  const users = await res.json();
+
   return (
     <div className="mt-20">
       <section className="flex-1 min-h-0 h-[80vh] lg:h-[60vh] grid grid-cols-9 gap-2">

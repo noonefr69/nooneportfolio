@@ -1,11 +1,27 @@
-export async function GET(request: Request) {
-  // For example, fetch data from your DB here
-  const users = [
-    { id: 1, name: "Alice" },
-    { id: 2, name: "Bob" },
-  ];
-  return new Response(JSON.stringify(users), {
-    status: 200,
-    headers: { "Content-Type": "application/json" },
-  });
+import dbConnect from "@/lib/db";
+import { Guestbook } from "@/app/schema/guest-book";
+
+export async function GET() {
+  try {
+    await dbConnect();
+
+    const entries = await Guestbook.find({}).sort({ createdAt: -1 }).lean();
+
+    return new Response(JSON.stringify(entries), {
+      status: 200,
+      headers: { "Content-Type": "application/json" },
+    });
+  } catch (err) {
+    console.error(err);
+    return new Response(
+      JSON.stringify({
+        success: false,
+        error: "Something went wrong. Please try again later.",
+      }),
+      {
+        status: 500,
+        headers: { "Content-Type": "application/json" },
+      },
+    );
+  }
 }
