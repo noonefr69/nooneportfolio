@@ -3,17 +3,14 @@ import GuestbookForm from "@/components/guestbook/form";
 import GetGuestbook from "@/components/guestbook/get-guestbook";
 import { Suspense } from "react";
 import { Spinner } from "@/components/ui/spinner";
+import Ascii from "@/components/guestbook/ascii";
 
 export default function GuestBook() {
   return (
     <div className="mt-20">
       <section className="flex-1 min-h-0 h-[80vh] lg:h-[60vh] grid grid-cols-9 gap-2">
         {/* Left Card */}
-        <Card className="hidden lg:flex lg:col-span-3">
-          <CardContent className="flex items-center justify-center h-full group">
-            <h1 className="group-hover:animate-ping">commin{"'"} soon.</h1>
-          </CardContent>
-        </Card>
+        <Ascii />
 
         {/* Right Card (Chat UI) */}
         <Card className="col-span-9 lg:col-span-6 flex flex-col overflow-hidden p-0">
