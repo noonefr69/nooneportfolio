@@ -6,6 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { ThemeProvider } from "@/components/theme-provider";
 import LilNavigator from "@/components/navigation/lil-navigator";
 import FooterSection from "@/components/landing/footer-section/footer";
+import { Toaster } from "@/components/ui/sonner";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -35,7 +36,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
               <div className="flex-1 min-w-0 pl-2 lg:pr-0 pr-2">
                 <LilNavigator />
                 {children}
-
+                <Toaster />
                 <FooterSection />
               </div>
               <aside className="p-10 hidden lg:flex flex-col items-center shrink-0">
