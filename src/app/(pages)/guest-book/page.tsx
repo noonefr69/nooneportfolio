@@ -1,20 +1,10 @@
 import { Card, CardContent } from "@/components/ui/card";
 import GuestbookForm from "@/components/guestbook/form";
-import GuestbookMessage from "@/components/guestbook/message";
-import { PinIcon } from "lucide-react";
+import GetGuestbook from "@/components/guestbook/get-guestbook";
+import { Suspense } from "react";
+import { Spinner } from "@/components/ui/spinner";
 
-export default async function GuestBook() {
-  const res = await fetch(`${process.env.APP_URL}/api/guestbook`, {
-    cache: "no-store",
-  });
-
-  if (!res.ok) {
-    throw new Error("Failed to fetch guestbook");
-  }
-
-  const guestbookMsgs = await res.json();
-  // console.log(guestbookMsgs);
-
+export default function GuestBook() {
   return (
     <div className="mt-20">
       <section className="flex-1 min-h-0 h-[80vh] lg:h-[60vh] grid grid-cols-9 gap-2">
@@ -38,23 +28,15 @@ export default async function GuestBook() {
               </pre>
             </div>
             {/* Messages Area */}
-            <div className="flex-1 overflow-y-auto overflow-x-hidden text-sm pr-2">
-              {/* Dummy Message 1 */}
-
-              <div className="group duration-100 hover:bg-accent cursor-default flex gap-2 py-2 hover:px-2 items-baseline">
-                <span className="text-xs shrink-0 text-muted-foreground">
-                  8/20/2026 12:12
-                </span>
-                <span className="text-primary font-bold">noone</span>
-                <p className="w-full flex items-center justify-between text-foreground whitespace-break-spaces text-justify truncate">
-                  hi, no sign-in required. please be nice :)
-                  <PinIcon className="group-hover:rotate-45 sm:flex hidden duration-100 size-4 rotate-0" />
-                </p>
-              </div>
-              {guestbookMsgs.map((msg) => (
-                <GuestbookMessage msg={msg} key={msg._id} />
-              ))}
-            </div>
+            <Suspense
+              fallback={
+                <div className="flex items-center justify-center flex-1 overflow-y-auto overflow-x-hidden text-sm pr-2">
+                  <Spinner className="lg:size-10" />
+                </div>
+              }
+            >
+              <GetGuestbook />
+            </Suspense>
             <GuestbookForm />
           </CardContent>
         </Card>
