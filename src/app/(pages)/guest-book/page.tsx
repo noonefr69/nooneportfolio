@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import GuestbookForm from "@/components/guestbook/form";
 import GuestbookMessage from "@/components/guestbook/message";
+import { PinIcon } from "lucide-react";
 
 export default async function GuestBook() {
   const res = await fetch(`${process.env.APP_URL}/api/guestbook`, {
@@ -39,6 +40,19 @@ export default async function GuestBook() {
             {/* Messages Area */}
             <div className="flex-1 overflow-y-auto overflow-x-hidden text-sm pr-2">
               {/* Dummy Message 1 */}
+
+              <div className="duration-100 hover:bg-accent py-2 relative group text-justify hover:px-2 cursor-default space-x-2 overflow-hidden truncate">
+                <span className="text-xs shrink-0 text-muted-foreground">
+                  8/20/2026 14:14
+                </span>
+                <span className="text-primary font-bold inline">noone:</span>
+                <p className="text-foreground inline whitespace-break-spaces">
+                  hi
+                </p>
+                <span className="rotate-45 absolute right-0 top-1/2 -translate-y-1/2 group-hover:right-2 duration-100">
+                  <PinIcon className="size-4" />
+                </span>
+              </div>
               {guestbookMsgs.map((msg) => (
                 <GuestbookMessage msg={msg} key={msg._id} />
               ))}
