@@ -38,7 +38,7 @@ export default function AboutHero() {
         </p>
         <p className="lg:text-base text-sm mt-2 text-muted-foreground">
           My mess-ups keep leveling up day by day. I’m looking for interesting
-          projects to contribute to. If something happens to me, it’s my fault.
+          projects to contribute to.
         </p>
         <p className="lg:text-base text-sm mt-2 text-muted-foreground">
           Maybe in another life, I’m happy.
