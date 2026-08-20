@@ -7,6 +7,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import LilNavigator from "@/components/navigation/lil-navigator";
 import FooterSection from "@/components/landing/footer-section/footer";
 import { Toaster } from "@/components/ui/sonner";
+import MobileViewNavigation from "@/components/navigation/mobile-view-navigation";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -35,6 +36,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             <main className="flex gap-2 max-w-7xl min-w-0 w-full mx-auto">
               <div className="flex-1 min-w-0 pl-2 lg:pr-0 pr-2">
                 <LilNavigator />
+                <MobileViewNavigation />
                 {children}
                 <Toaster />
                 <FooterSection />
