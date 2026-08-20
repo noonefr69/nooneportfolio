@@ -16,7 +16,7 @@ export default function HeroSection() {
           className={`text-xl md:text-3xl lg:text-4xl font-semibold lg:font-bold lg:text-start text-center ${pixelifySans.className}`}
         >
           Senior front-end engineer {`(nope, I'm junior/mid-level)`} with a lot
-          of passion for computers, who likes FOSS and Linux.
+          of la passion for computers, who likes FOSS and Linux.
         </h1>
         <p className="mt-8 lg:text-start text-center">
           I{`'`}m Kasra M. Hosseini, early 20s. Started coding at 16 to land a

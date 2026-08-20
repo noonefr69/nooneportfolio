@@ -8,6 +8,10 @@ import * as z from "zod";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
+import { useTransition } from "react";
+import { createGuestbook } from "@/app/actions/create-guestbook";
+import { ArrowUpToLine, ChevronRight } from "lucide-react";
+import { Spinner } from "@/components/ui/spinner";
 
 // 1. Create the form schema
 const formSchema = z.object({
@@ -22,6 +26,8 @@ const formSchema = z.object({
 });
 
 export default function GuestBook() {
+  const [isPending, startTransition] = useTransition();
+
   // 2. Initialize the form
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -34,15 +40,31 @@ export default function GuestBook() {
 
   // 3. Dummy submit function (UI only)
   function onSubmit(data: z.infer<typeof formSchema>) {
-    toast("Guestbook submission:", {
-      description: (
-        <pre className="mt-2 w-[320px] overflow-x-auto rounded-md bg-code p-4 text-code-foreground">
-          <code>{JSON.stringify(data, null, 2)}</code>
-        </pre>
-      ),
-      position: "bottom-right",
+    startTransition(async () => {
+      try {
+        const action = await createGuestbook(data);
+
+        if (!action.success) {
+          toast.error(action.error);
+          return;
+        }
+
+        toast.success(action.message);
+        form.reset();
+      } catch (err) {
+        console.error(err);
+        toast.error(`something went wrong`);
+      }
     });
-    form.reset();
+    // toast("Guestbook submission:", {
+    //   description: (
+    //     <pre className="mt-2 w-[320px] overflow-x-auto rounded-md bg-code p-4 text-code-foreground">
+    //       <code>{JSON.stringify(data, null, 2)}</code>
+    //     </pre>
+    //   ),
+    //   position: "bottom-right",
+    // });
+    // form.reset();
   }
 
   return (
@@ -62,9 +84,9 @@ export default function GuestBook() {
               guestbook
               <pre className="flex items-end hover:tracking-tighter duration-100 hover:scale-99 group">
                 ᓚ₍ ^. ̫ .^₎
-                <pre className="text-[10px] group-hover:rotate-6 group-hover:text-xs opacity-0 group-hover:opacity-100 duration-75">
+                <span className="text-[10px] group-hover:rotate-6 group-hover:text-xs opacity-0 group-hover:opacity-100 duration-75">
                   meow
-                </pre>
+                </span>
               </pre>
             </div>
 
@@ -158,9 +180,16 @@ export default function GuestBook() {
                           type="submit"
                           variant="outline"
                           size="sm"
-                          className="h-8 text-sm"
+                          className="h-8 w-24 text-sm group"
                         >
-                          send -&gt;
+                          {isPending ? (
+                            <Spinner />
+                          ) : (
+                            <>
+                              submit
+                              <ChevronRight className="duration-100 group-hover:-rotate-12" />
+                            </>
+                          )}{" "}
                         </Button>
                       </div>
                       {/*{fieldState.invalid && (
