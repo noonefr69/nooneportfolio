@@ -20,7 +20,7 @@ export default function LilNavigator() {
       <Button variant={"ghost"} size={"sm"} asChild>
         <Link
           target="_blank"
-          href={`https://github.com/noonefr69/portfoliopaper`}
+          href={`https://github.com/noonefr69/nooneportfolio`}
         >
           Source
         </Link>
