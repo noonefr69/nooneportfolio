@@ -33,10 +33,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           disableTransitionOnChange
         >
           <TooltipProvider>
+            <MobileViewNavigation />
             <main className="flex gap-2 max-w-7xl min-w-0 w-full mx-auto">
               <div className="flex-1 min-w-0 pl-2 lg:pr-0 pr-2">
                 <LilNavigator />
-                <MobileViewNavigation />
                 {children}
                 <Toaster />
                 <FooterSection />

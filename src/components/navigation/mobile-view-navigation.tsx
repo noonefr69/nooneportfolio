@@ -13,10 +13,14 @@ import {
 } from "@/components/ui/sheet";
 import { Button } from "../ui/button";
 import { MenuIcon } from "lucide-react";
+import { navLinks } from "@/consts/navLinks";
+import { Separator } from "../ui/separator";
+import React from "react";
+import { ToggleTheme } from "../toggle-theme";
 
 export default function MobileViewNavigation() {
   return (
-    <div className="py-4 lg:hidden flex justify-between items-center border-b sticky top-0 bg-background z-50">
+    <div className="py-4 lg:hidden flex justify-between items-center border-b px-2 sticky top-0 bg-background z-50">
       <Card className="bg-transparent p-0">
         <Link href={`/`}>
           <Image
@@ -36,9 +40,36 @@ export default function MobileViewNavigation() {
         </SheetTrigger>
         <SheetContent>
           <SheetHeader>
-            <SheetTitle>Are you absolutely sure?</SheetTitle>
-            <SheetDescription>This action cannot be undone.</SheetDescription>
+            <SheetTitle className="text-xl">˙𐃷˙</SheetTitle>
+            <div className="flex gap-0.5 flex-col mt-8">
+              {navLinks.map((link) => (
+                <React.Fragment key={link.href}>
+                  <Button
+                    asChild
+                    variant={"ghost"}
+                    className="w-full flex items-center text-xl font-semibold h-fit py-2 justify-start"
+                  >
+                    <Link href={link.href}>
+                      {<link.icon className="size-8" />}
+                      {link.label}
+                    </Link>
+                  </Button>
+                  <Separator />
+                </React.Fragment>
+              ))}
+            </div>
           </SheetHeader>
+          <SheetFooter className="flex flex-row items-center">
+            <ToggleTheme />
+            <Button variant={"ghost"} size={"default"} asChild>
+              <Link
+                target="_blank"
+                href={`https://github.com/noonefr69/portfoliopaper`}
+              >
+                Source
+              </Link>
+            </Button>
+          </SheetFooter>
         </SheetContent>
       </Sheet>
     </div>

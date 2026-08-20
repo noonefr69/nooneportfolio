@@ -11,17 +11,17 @@ export default function AboutHero() {
     <section className="grid lg:grid-cols-6 gap-4">
       <div className="lg:col-span-4">
         <h1
-          className={`flex items-center text-xl md:text-3xl lg:text-4xl font-semibold lg:font-bold ${pixelifySans.className}`}
+          className={`flex items-center justify-center lg:justify-start text-xl md:text-3xl lg:text-4xl font-semibold lg:font-bold ${pixelifySans.className}`}
         >
           <span className="font-thin text-3xl lg:text-5xl">~</span>$ whoami?
         </h1>
         <h2
-          className={`text-2xl md:text-4xl lg:text-5xl font-semibold lg:font-bold ${pixelifySans.className}`}
+          className={`text-2xl md:text-4xl text-center lg:text-start lg:text-5xl font-semibold lg:font-bold ${pixelifySans.className}`}
         >
           Kasra M. Hosseini
         </h2>
         <h3
-          className={`mt-2 mb-4 lg:mb-0 flex items-center gap-1 text-base md:text-lg lg:text-xl font-semibold lg:font-bold lg:text-start text-center ${pixelifySans.className}`}
+          className={`mt-2 mb-4 lg:mb-0 flex justify-center lg:justify-start items-center gap-1 text-base md:text-lg lg:text-xl font-semibold lg:font-bold lg:text-start text-center ${pixelifySans.className}`}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -35,24 +35,24 @@ export default function AboutHero() {
           </svg>
           Iran, East Azerbaijan, Tabriz
         </h3>
-        <p className="lg:text-base text-sm mt-2 text-muted-foreground">
+        <p className="lg:text-base text-sm mt-2 lg:text-start text-center text-muted-foreground">
           I don’t have much to say about myself, but at least I know that I’m a
           self-learner. I try to contribute. I started programming ’cause why
           not.
         </p>
-        <p className="lg:text-base text-sm mt-2 text-muted-foreground">
+        <p className="lg:text-base text-sm mt-2 tlg:text-start text-cente text-muted-foreground">
           Then I noticed programming is not just code, so I kinda cooked. But
           since I love math, it doesn’t matter.
         </p>
-        <p className="lg:text-base text-sm mt-2 text-muted-foreground">
+        <p className="lg:text-base text-sm mt-2 text-muted-foreground lg:text-start text-center">
           I’m a CS student at Azad University, Tabriz. Maybe if I study a little
           bit more, I might get into a good university.
         </p>
-        <p className="lg:text-base text-sm mt-2 text-muted-foreground">
+        <p className="lg:text-base text-sm mt-2 text-muted-foreground lg:text-start text-center">
           My mess-ups keep leveling up day by day. I’m looking for interesting
           projects to contribute to.
         </p>
-        <p className="lg:text-base text-sm mt-2 text-muted-foreground">
+        <p className="lg:text-base text-sm mt-2 text-muted-foreground lg:text-start text-center">
           Maybe in another life, I’m happy.
         </p>
       </div>
@@ -67,7 +67,7 @@ export default function AboutHero() {
           height={1080}
           className="lg:w-full sm:w-1/2 mx-auto duration-100 hover:scale-88 object-cover scale-90 dark:opacity-80 active:shadow-none active:translate-y-1 dark:hover:shadow-[-10px_-10px_0px_#f2eede] hover:shadow-[-10px_-10px_0px_black] shadow-[10px_10px_0px_0px_black] dark:shadow-[10px_10px_0px_0px_#f2eede]"
         />
-        <p className="text-end text-muted-foreground text-xs lg:text-sm font-semibold duration-100 hover:opacity-100 opacity-70">
+        <p className="text-center lg:text-end text-muted-foreground text-xs lg:text-sm font-semibold duration-100 hover:opacity-100 opacity-70">
           Don{`'`}t wait for the moon, because I don{`'`}t go out of my room...
         </p>
       </div>

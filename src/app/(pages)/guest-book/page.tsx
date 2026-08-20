@@ -7,7 +7,7 @@ import Ascii from "@/components/guestbook/ascii";
 
 export default function GuestBook() {
   return (
-    <div className="mt-20">
+    <div className="mt-10 lg:mt-20">
       <section className="flex-1 min-h-0 h-[80vh] lg:h-[60vh] grid grid-cols-9 gap-2">
         {/* Left Card */}
         <Ascii />

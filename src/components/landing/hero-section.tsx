@@ -10,7 +10,7 @@ const pixelifySans = Pixelify_Sans({
 
 export default function HeroSection() {
   return (
-    <div className="grid grid-cols-6 gap-4 mt-16">
+    <div className="grid grid-cols-6 gap-4 mt-8 lg:mt-16">
       <div className="col-span-6 lg:col-span-4">
         <h1
           id="socials"
