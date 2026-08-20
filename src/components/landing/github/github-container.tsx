@@ -104,7 +104,7 @@ export default function GitHubContainer() {
             )}
           </CardContent>
         </Card>
-        <div className="flex flex-col gap-2">
+        <div className="hidden md:flex flex-col gap-2">
           {years
             .map((y) => (
               <Button
