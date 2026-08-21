@@ -16,8 +16,7 @@ export default function HeroSection() {
           id="socials"
           className={`text-xl md:text-3xl lg:text-4xl font-semibold lg:font-bold lg:text-start text-center ${pixelifySans.className}`}
         >
-          Senior front-end engineer with a lot of la passion for computers, FOSS
-          and Linux.
+          Senior front-end engineer in love with computers, FOSS and Linux.
           <span className="font-mono text-xs lg:text-sm text-muted-foreground block">{`(don't tell anyone but I'm mid level >-<)`}</span>
         </h1>
 
@@ -84,12 +83,44 @@ export default function HeroSection() {
             >
               <Image
                 src={`/socials/xicon.svg`}
-                alt="github"
+                alt="Twitter"
                 width={16}
                 height={16}
                 className="dark:invert"
               />
               Twitter
+            </Link>
+          </Button>
+          <Button asChild size={"lg"} variant={"secondary"}>
+            <Link
+              className="flex items-center"
+              href={`https://www.linkedin.com/in/kasra-m-hosseini`}
+              target="_blank"
+            >
+              <Image
+                src={`/socials/linkedin.svg`}
+                alt="linkedin"
+                width={16}
+                height={16}
+                className="dark:invert"
+              />
+              Linkedin
+            </Link>
+          </Button>
+          <Button asChild size={"lg"} variant={"secondary"}>
+            <Link
+              className="flex items-center"
+              href={`https://web.bale.ai/chat?uid=139719284`}
+              target="_blank"
+            >
+              <Image
+                src={`/socials/bale.svg`}
+                alt="bale.svg"
+                width={16}
+                height={16}
+                className="dark:invert"
+              />
+              Bale
             </Link>
           </Button>
         </div>
