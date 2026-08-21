@@ -56,8 +56,8 @@ export default function AboutHero() {
           Maybe in another life, I’m happy.
         </p>
       </div>
-      <div className="lg:col-span-2 relative">
-        <span className="absolute -left-1 -top-1 sm:left-1/4 lg:-left-2 lg:-top-2 duration-100 hover:tracking-widest -rotate-6 hover:-rotate-12">
+      <div className="lg:col-span-2 flex flex-col items-center justify-center relative">
+        <span className="absolute -left-1 top-0 sm:-top-1 sm:left-1/4 lg:-left-2 lg:top-6 duration-100 hover:tracking-widest -rotate-6 hover:-rotate-12">
           fr
         </span>
         <Image
