@@ -40,7 +40,7 @@ export default function AboutHero() {
           self-learner. I try to contribute. I started programming ’cause why
           not.
         </p>
-        <p className="lg:text-base text-sm mt-2 tlg:text-start text-center text-muted-foreground">
+        <p className="lg:text-base text-sm mt-2 lg:text-start text-center text-muted-foreground">
           Then I noticed programming is not just code, so I kinda cooked. But
           since I love math, it doesn’t matter.
         </p>
