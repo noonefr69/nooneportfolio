@@ -1,22 +1,48 @@
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
+import { GhostIcon, HomeIcon } from "lucide-react";
+import { Pixelify_Sans } from "next/font/google";
+import { Separator } from "@/components/ui/separator";
 import Link from "next/link";
+import Image from "next/image";
+
+const pixelifySans = Pixelify_Sans({
+  subsets: ["latin"],
+});
 
 export default function NotFound() {
   return (
-    <div className="h-svh lg:h-[89vh] flex flex-col items-center justify-center pt-16">
-      <Image
-        src={`/webps/not-found.webp`}
-        alt="ahhh"
-        width={1071}
-        height={1200}
-        className="object-cover w-32 aspect-square ring-2 ring-primary mb-4 duration-100 hover:scale-95 hover:ring-4 active:top-1 relative hover:scale-x-90 hover:-top-1"
-      />
-      <p className="lg:text-2xl text-xl font-semibold">404, page not found.</p>
-      <p className="lg:text-lg font-semibold">like my life...</p>
-      <div className="flex items-center mt-2 gap-2">
-        <Button asChild variant={"secondary"}>
-          <Link href="/">return home</Link>
+    <div className="flex min-h-0 h-[80vh] w-full flex-col items-center justify-center gap-8 mt-16">
+      <div className="flex flex-col items-center gap-1 text-center">
+        <Image
+          src={`/webps/not-found.webp`}
+          alt="ahhh"
+          width={1071}
+          height={1200}
+          className="object-cover w-48 aspect-square ring-4 ring-primary duration-100 hover:scale-95"
+        />
+
+        <h2
+          className={`text-xl md:text-3xl font-bold ${pixelifySans.className}`}
+        >
+          404, page not found.
+        </h2>
+
+        <p className="max-w-md text-sm md:text-base text-muted-foreground text-justify">
+          like my life...
+        </p>
+      </div>
+
+      <div className="flex items-center gap-2">
+        <Button
+          asChild
+          size="lg"
+          variant="secondary"
+          className="group flex items-center gap-2 active:translate-y-0.5 hover:scale-95 transition-transform duration-100"
+        >
+          <Link href="/">
+            <HomeIcon className="size-4 group-hover:-rotate-12 transition-transform duration-300" />
+            return home
+          </Link>
         </Button>
       </div>
     </div>

@@ -41,7 +41,7 @@ export default function GlobalError({
           Oops! Something broke.
         </h2>
 
-        <p className="max-w-md text-sm md:text-base text-muted-foreground text-justify">
+        <p className="max-w-md text-center text-sm md:text-base text-muted-foreground">
           {error.message ||
             "An unexpected error occurred while rendering this page."}
         </p>
