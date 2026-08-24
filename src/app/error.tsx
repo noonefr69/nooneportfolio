@@ -6,6 +6,7 @@ import { GhostIcon, HeadsetIcon, RedoIcon, RotateCcw } from "lucide-react";
 import { Pixelify_Sans } from "next/font/google";
 import { Separator } from "@/components/ui/separator";
 import Link from "next/link";
+import Image from "next/image";
 
 const pixelifySans = Pixelify_Sans({
   subsets: ["latin"],
@@ -26,7 +27,13 @@ export default function GlobalError({
   return (
     <div className="flex min-h-0 h-[80vh] w-full flex-col items-center justify-center gap-8 mt-16">
       <div className="flex flex-col items-center gap-3 text-center">
-        <GhostIcon className="animate-pulse hover:animate-none size-12 md:size-16 text-muted-foreground hover:scale-110 hover:-rotate-6 transition-transform duration-100" />
+        <Image
+          src={`/webps/error.webp`}
+          alt="error image"
+          width={480}
+          height={360}
+          className="object-cover w-48 aspect-square ring-4 ring-destructive duration-100 hover:ring-primary active:translate-y-px hover:scale-95"
+        />
 
         <h2
           className={`text-xl md:text-3xl font-bold ${pixelifySans.className}`}
