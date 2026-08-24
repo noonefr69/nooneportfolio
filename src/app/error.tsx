@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { GhostIcon, HeadsetIcon, RedoIcon, RotateCcw } from "lucide-react";
+import { HeadsetIcon, RotateCcw } from "lucide-react";
 import { Pixelify_Sans } from "next/font/google";
 import { Separator } from "@/components/ui/separator";
 import Link from "next/link";

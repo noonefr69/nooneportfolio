@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import { techIUse } from "@/consts/tech-i-use";
 import Image from "next/image";
 import { Card, CardContent } from "../ui/card";
