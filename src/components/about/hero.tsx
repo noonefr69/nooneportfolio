@@ -1,4 +1,3 @@
-import { MapPinIcon } from "lucide-react";
 import { Pixelify_Sans } from "next/font/google";
 import Image from "next/image";
 
@@ -60,11 +59,13 @@ export default function AboutHero() {
         <span className="absolute -left-1 top-0 sm:-top-1 sm:left-1/4 lg:-left-2 lg:top-6 duration-100 hover:tracking-widest -rotate-6 hover:-rotate-12">
           fr
         </span>
+
         <Image
-          src={`/me2.jpg`}
-          alt="mefr"
-          width={1980}
-          height={1080}
+          src="/webps/metwo.webp"
+          alt="Kasra, the site owner"
+          width={1000}
+          height={1000}
+          sizes="(max-width: 1024px) 50vw, 33vw"
           className="lg:w-full sm:w-1/2 mx-auto duration-100 hover:scale-88 object-cover scale-90 dark:opacity-80 active:shadow-none active:translate-y-1 dark:hover:shadow-[-10px_-10px_0px_#f2eede] hover:shadow-[-10px_-10px_0px_black] shadow-[10px_10px_0px_0px_black] dark:shadow-[10px_10px_0px_0px_#f2eede]"
         />
         <p className="text-center lg:text-end text-muted-foreground text-xs lg:text-sm font-semibold duration-100 hover:opacity-100 opacity-70">

@@ -10,8 +10,8 @@ export default function LogoHeader() {
         className="h-full w-full flex items-center justify-center hover:animate-spin hover:scale-95 duration-100"
       >
         <Image
-          src={`/trans.png`}
-          width={1980}
+          src={`/webps/logo.webp`}
+          width={1920}
           height={1080}
           alt="logo.png"
           className="aspect-square scale-x-125 object-cover"

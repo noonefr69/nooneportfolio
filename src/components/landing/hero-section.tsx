@@ -136,11 +136,13 @@ export default function HeroSection() {
           <CodeXmlIcon />
         </span>
         <Image
-          src={`/me.JPG`}
+          src={`/webps/me.webp`}
           alt="me.JPG"
-          width={1980}
-          height={1080}
-          className="sm:w-1/2 lg:w-full mx-auto scale-75 hover:shadow-none hover:scale-73 dark:hover:shadow-none duration-100 shadow-[10px_10px_0px_0px_black] dark:shadow-[10px_10px_0px_0px_#f2eede]"
+          width={540}
+          height={606}
+          className="sm:w-1/2 lg:w-full aspect-auto mx-auto scale-75 hover:shadow-none hover:scale-73 dark:hover:shadow-none duration-100 shadow-[10px_10px_0px_0px_black] dark:shadow-[10px_10px_0px_0px_#f2eede]"
+          priority
+          sizes="(max-width: 1024px) 50vw, 33vw"
         />
       </div>
     </div>
