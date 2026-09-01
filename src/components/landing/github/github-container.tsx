@@ -3,10 +3,14 @@
 import "react-activity-calendar/tooltips.css";
 import { Spinner } from "@/components/ui/spinner";
 import { useState, useEffect } from "react";
+import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ActivityCalendar } from "react-activity-calendar";
 import { BirdIcon, SnailIcon } from "lucide-react";
+
+const LIGHT_COLORS = ["#ebedf0", "#BCD5A1", "#7BAE54", "#42830F", "#216609"];
+const DARK_COLORS = ["#2B2B2B", "#BCD5A1", "#7BAE54", "#42830F", "#216609"];
 
 type Activity = {
   date: string;
@@ -18,6 +22,7 @@ export default function GitHubContainer() {
   const currentYear = new Date().getFullYear();
   const currentMonth = new Date().getMonth();
   const currentDay = new Date().getDate();
+  const { resolvedTheme } = useTheme();
   const [year, setYear] = useState(currentYear);
   const [data, setData] = useState<Activity[]>([]);
   const [loading, setLoading] = useState(true);
@@ -70,21 +75,10 @@ export default function GitHubContainer() {
                 <ActivityCalendar
                   data={data}
                   theme={{
-                    light: [
-                      "#E8E1C8",
-                      "#BCD5A1",
-                      "#7BAE54",
-                      "#42830F",
-                      "#216609",
-                    ],
-                    dark: [
-                      "#2B2B2B",
-                      "#BCD5A1",
-                      "#7BAE54",
-                      "#42830F",
-                      "#216609",
-                    ],
+                    light: LIGHT_COLORS,
+                    dark: DARK_COLORS,
                   }}
+                  colorScheme={resolvedTheme === "dark" ? "dark" : "light"}
                   tooltips={{
                     activity: {
                       text: ({ level, date }) =>
