@@ -9,7 +9,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { ActivityCalendar } from "react-activity-calendar";
 import { BirdIcon, SnailIcon } from "lucide-react";
 
-const LIGHT_COLORS = ["#ebedf0", "#BCD5A1", "#7BAE54", "#42830F", "#216609"];
+const LIGHT_COLORS = ["#eae4d2", "#BCD5A1", "#7BAE54", "#42830F", "#216609"];
 const DARK_COLORS = ["#2B2B2B", "#BCD5A1", "#7BAE54", "#42830F", "#216609"];
 
 type Activity = {

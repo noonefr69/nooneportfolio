@@ -3,14 +3,9 @@
 import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { HeadsetIcon, RotateCcw } from "lucide-react";
-import { Pixelify_Sans } from "next/font/google";
 import { Separator } from "@/components/ui/separator";
 import Link from "next/link";
 import Image from "next/image";
-
-const pixelifySans = Pixelify_Sans({
-  subsets: ["latin"],
-});
 
 export default function GlobalError({
   error,
@@ -35,9 +30,7 @@ export default function GlobalError({
           className="object-cover w-48 aspect-square ring-4 ring-destructive duration-100 hover:ring-primary active:translate-y-px hover:scale-95"
         />
 
-        <h2
-          className={`text-xl md:text-3xl font-bold ${pixelifySans.className}`}
-        >
+        <h2 className={`text-xl md:text-3xl font-bold font-mono mt-4`}>
           Oops! Something broke.
         </h2>
 
@@ -58,7 +51,7 @@ export default function GlobalError({
           onClick={() => retry()}
           size="lg"
           variant="secondary"
-          className="group flex items-center gap-2 active:translate-y-0.5 hover:scale-95 transition-transform duration-100"
+          className="group flex items-center gap-2 active:translate-y-0.5 hover:scale-98 transition-transform duration-100"
         >
           <RotateCcw className="-scale-x-100 size-4 group-hover:rotate-180 transition-transform duration-300" />
           Try again
@@ -68,7 +61,7 @@ export default function GlobalError({
           onClick={() => retry()}
           size="lg"
           variant="secondary"
-          className="group flex items-center gap-2 active:translate-y-0.5 hover:scale-95 transition-transform duration-100"
+          className="group flex items-center gap-2 active:translate-y-0.5 hover:scale-98 transition-transform duration-100"
           asChild
         >
           <Link href={`/#socials`}>

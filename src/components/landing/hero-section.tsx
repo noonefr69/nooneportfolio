@@ -1,11 +1,32 @@
 import { Button } from "@/components/ui/button";
 import { CodeXmlIcon, RedoIcon } from "lucide-react";
-import { Pixelify_Sans } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
+import localFont from "next/font/local";
 
-const pixelifySans = Pixelify_Sans({
-  subsets: ["latin"],
+const pixelify = localFont({
+  src: [
+    {
+      path: "../../fonts/Pixelify/static/PixelifySans-Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../fonts/Pixelify/static/PixelifySans-Medium.ttf",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../../fonts/Pixelify/static/PixelifySans-SemiBold.ttf",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "../../fonts/Pixelify/static/PixelifySans-Bold.ttf",
+      weight: "700",
+      style: "normal",
+    },
+  ],
 });
 
 export default function HeroSection() {
@@ -14,7 +35,7 @@ export default function HeroSection() {
       <div className="col-span-6 lg:col-span-4">
         <h1
           id="socials"
-          className={`text-xl md:text-3xl lg:text-4xl font-semibold lg:font-bold lg:text-start text-center ${pixelifySans.className}`}
+          className={`${pixelify.className} text-xl md:text-3xl lg:text-4xl font-semibold lg:font-bold lg:text-start text-center`}
         >
           Senior front-end engineer in love with computers, FOSS and Linux.
           <span className="font-mono text-xs lg:text-sm text-muted-foreground block">{`(don't tell anyone but I'm mid level >-<)`}</span>

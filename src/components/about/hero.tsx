@@ -1,8 +1,29 @@
-import { Pixelify_Sans } from "next/font/google";
 import Image from "next/image";
+import localFont from "next/font/local";
 
-const pixelifySans = Pixelify_Sans({
-  subsets: ["latin"],
+const pixelify = localFont({
+  src: [
+    {
+      path: "../../fonts/Pixelify/static/PixelifySans-Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../fonts/Pixelify/static/PixelifySans-Medium.ttf",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../../fonts/Pixelify/static/PixelifySans-SemiBold.ttf",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "../../fonts/Pixelify/static/PixelifySans-Bold.ttf",
+      weight: "700",
+      style: "normal",
+    },
+  ],
 });
 
 export default function AboutHero() {
@@ -10,17 +31,17 @@ export default function AboutHero() {
     <section className="grid lg:grid-cols-6 gap-4">
       <div className="lg:col-span-4">
         <h1
-          className={`flex items-center justify-center lg:justify-start text-xl md:text-3xl lg:text-4xl font-semibold lg:font-bold ${pixelifySans.className}`}
+          className={`${pixelify.className} flex items-center justify-center lg:justify-start text-xl md:text-3xl lg:text-4xl font-semibold lg:font-bold`}
         >
           <span className="font-thin text-3xl lg:text-5xl">~</span>$ whoami?
         </h1>
         <h2
-          className={`text-2xl md:text-4xl text-center lg:text-start lg:text-5xl font-semibold lg:font-bold ${pixelifySans.className}`}
+          className={`${pixelify.className} text-2xl md:text-4xl text-center lg:text-start lg:text-5xl font-semibold lg:font-bold`}
         >
           Kasra M. Hosseini
         </h2>
         <h3
-          className={`mt-2 mb-4 lg:mb-0 flex justify-center lg:justify-start items-center gap-1 text-base md:text-lg lg:text-xl font-semibold lg:font-bold lg:text-start text-center ${pixelifySans.className}`}
+          className={`${pixelify.className} mt-2 mb-4 lg:mb-0 flex justify-center lg:justify-start items-center gap-1 text-base md:text-lg lg:text-xl font-semibold lg:font-bold lg:text-start text-center`}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

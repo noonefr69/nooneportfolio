@@ -1,13 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { GhostIcon, HomeIcon } from "lucide-react";
-import { Pixelify_Sans } from "next/font/google";
-import { Separator } from "@/components/ui/separator";
+import { HomeIcon } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
-
-const pixelifySans = Pixelify_Sans({
-  subsets: ["latin"],
-});
 
 export default function NotFound() {
   return (
@@ -21,9 +15,7 @@ export default function NotFound() {
           className="object-cover w-48 aspect-square ring-4 ring-primary duration-100 hover:scale-95"
         />
 
-        <h2
-          className={`text-xl md:text-3xl font-bold ${pixelifySans.className}`}
-        >
+        <h2 className={`text-xl md:text-3xl font-bold font-mono mt-4`}>
           404, page not found.
         </h2>
 

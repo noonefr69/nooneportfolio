@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Fira_Code } from "next/font/google";
 import "./globals.css";
 import AsideNav from "@/components/navigation/aside-nav";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -8,6 +7,7 @@ import LilNavigator from "@/components/navigation/lil-navigator";
 import FooterSection from "@/components/landing/footer-section/footer";
 import { Toaster } from "@/components/ui/sonner";
 import MobileViewNavigation from "@/components/navigation/mobile-view-navigation";
+import localfont from "next/font/local";
 
 export const metadata: Metadata = {
   title: {
@@ -17,8 +17,29 @@ export const metadata: Metadata = {
   description: "noone portfolio | best in world | i'm kidding",
 };
 
-const firaCode = Fira_Code({
-  subsets: ["latin"],
+const firaCode = localfont({
+  src: [
+    {
+      path: "../fonts/Fira_Code/static/FiraCode-Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../fonts/Fira_Code/static/FiraCode-Medium.ttf",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../fonts/Fira_Code/static/FiraCode-SemiBold.ttf",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "../fonts/Fira_Code/static/FiraCode-Bold.ttf",
+      weight: "700",
+      style: "normal",
+    },
+  ],
 });
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
