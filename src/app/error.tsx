@@ -64,7 +64,10 @@ export default function GlobalError({
           className="group flex items-center gap-2 active:translate-y-0.5 hover:scale-98 transition-transform duration-100"
           asChild
         >
-          <Link href={`/#socials`}>
+          <Link
+            target="_blank"
+            href={`https://github.com/noonefr69/nooneportfolio/issues`}
+          >
             Contact
             <HeadsetIcon className="size-4 group-hover:rotate-12 transition-transform duration-300" />
           </Link>
