@@ -78,8 +78,15 @@ export async function GET(request: Request) {
     });
 
     if (!res.ok) {
+      const errorText = await res.text();
+
+      console.error("GitHub API error:", res.status, errorText);
+
       return NextResponse.json(
-        { error: "Failed to fetch GitHub data" },
+        {
+          error: errorText,
+          status: res.status,
+        },
         { status: res.status },
       );
     }
