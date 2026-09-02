@@ -1,6 +1,7 @@
 "use client";
 
 import { Card } from "@/components/ui/card";
+import { Switch } from "@/components/ui/switch";
 import {
   Tooltip,
   TooltipContent,
@@ -15,10 +16,11 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { useVideoPlaying } from "@/store/useVideoPlaying";
-import { Button } from "@/components/ui/button";
 
 export default function Settings() {
   const togglePlaying = useVideoPlaying((state) => state.togglePlaying);
+  const isPlaying = useVideoPlaying((state) => state.isPlaying);
+
   return (
     <Card className="flex flex-col items-center justify-between w-16 bg-transparent">
       <Tooltip>
@@ -48,7 +50,14 @@ export default function Settings() {
               Settings
             </DialogTitle>
           </DialogHeader>
-          <Button onClick={() => togglePlaying()}>Play / Pause</Button>
+          <div className="flex items-center justify-between">
+            <h1>`Auto-play` video</h1>
+            <Switch
+              className="cursor-pointer"
+              onCheckedChange={togglePlaying}
+              checked={isPlaying}
+            />
+          </div>
         </DialogContent>
       </Dialog>
     </Card>
