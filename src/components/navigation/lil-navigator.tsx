@@ -2,6 +2,7 @@ import { ToggleTheme } from "@/components/toggle-theme";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import Link from "next/link";
+import VideoPlaying from "./lil-na/video-playing";
 
 export default function LilNavigator() {
   return (
@@ -15,15 +16,7 @@ export default function LilNavigator() {
           Source
         </Link>
       </Button>
-      <video
-        className="w-16 object-cover my-6 h-10 hover:scale-95 duration-100"
-        muted
-        autoPlay
-        loop
-      >
-        <source src="/gifs/vid3.MP4" type="video/mp4" />
-        format error.
-      </video>
+      <VideoPlaying />
     </Card>
   );
 }

@@ -1,3 +1,5 @@
+"use client";
+
 import { Card } from "@/components/ui/card";
 import {
   Tooltip,
@@ -13,8 +15,11 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import { useVideoPlaying } from "@/store/useVideoPlaying";
+import { Button } from "@/components/ui/button";
 
 export default function Settings() {
+  const startPlying = useVideoPlaying((state) => state.startPlaying);
   return (
     <Card className="flex flex-col items-center justify-between w-16 bg-transparent">
       <Tooltip>
@@ -41,10 +46,10 @@ export default function Settings() {
         <DialogContent>
           <DialogHeader>
             <DialogTitle className="flex items-center gap-2">
-              Help me <FaceSlightlyFrowningIcon />
+              settings
             </DialogTitle>
             <DialogDescription>
-              I don{`'`}t know what should I put here :)
+              <Button onClick={startPlying}>play/pause</Button>
             </DialogDescription>
           </DialogHeader>
         </DialogContent>
