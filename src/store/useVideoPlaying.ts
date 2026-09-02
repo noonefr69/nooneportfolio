@@ -1,12 +1,12 @@
 import { create } from "zustand";
 
-interface VideoPlayingProps {
-  isItPlaying: boolean;
-  startPlaying: () => void;
+interface VideoPlayingState {
+  isPlaying: boolean;
+  togglePlaying: () => void;
 }
 
-export const useVideoPlaying = create<VideoPlayingProps>((set) => ({
-  isItPlaying: true,
+export const useVideoPlaying = create<VideoPlayingState>((set) => ({
+  isPlaying: true,
 
-  startPlaying: () => set((state) => ({ isItPlaying: !state.isItPlaying })),
+  togglePlaying: () => set((state) => ({ isPlaying: !state.isPlaying })),
 }));

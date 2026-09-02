@@ -3,7 +3,7 @@ import "./globals.css";
 import AsideNav from "@/components/navigation/aside-nav";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { ThemeProvider } from "@/components/theme-provider";
-import LilNavigator from "@/components/navigation/lil-navigator";
+import LilNavigator from "@/components/navigation/lil-na/lil-navigator";
 import FooterSection from "@/components/landing/footer-section/footer";
 import { Toaster } from "@/components/ui/sonner";
 import MobileViewNavigation from "@/components/navigation/mobile-view-navigation";

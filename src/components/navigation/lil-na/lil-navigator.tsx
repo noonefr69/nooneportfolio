@@ -2,7 +2,7 @@ import { ToggleTheme } from "@/components/toggle-theme";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import Link from "next/link";
-import VideoPlaying from "./lil-na/video-playing";
+import VideoPlaying from "./video-playing";
 
 export default function LilNavigator() {
   return (
@@ -11,7 +11,7 @@ export default function LilNavigator() {
       <Button variant={"ghost"} size={"sm"} asChild>
         <Link
           target="_blank"
-          href={`https://github.com/noonefr69/nooneportfolio`}
+          href="https://github.com/noonefr69/nooneportfolio"
         >
           Source
         </Link>
