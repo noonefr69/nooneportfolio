@@ -22,7 +22,7 @@ export default function MobileViewNavigation() {
       <Card className="bg-transparent p-0">
         <Link href={`/`}>
           <Image
-            src={`/trans.png`}
+            src={`/webps/logo.webp`}
             alt="logo.png"
             width={1980}
             height={1080}
@@ -38,7 +38,7 @@ export default function MobileViewNavigation() {
         </SheetTrigger>
         <SheetContent>
           <SheetHeader>
-            <SheetTitle className="text-xl">˙𐃷˙</SheetTitle>
+            <SheetTitle className="text-xl">˙ᵕ˙</SheetTitle>
             <div className="flex gap-0.5 flex-col mt-8">
               {navLinks.map((link) => (
                 <React.Fragment key={link.href}>
