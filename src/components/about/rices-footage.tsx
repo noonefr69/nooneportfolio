@@ -1,35 +1,131 @@
 import Image from "next/image";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 export default function RicesFootage() {
   return (
     <section className="mt-16">
-      <div className="flex flex-col lg:flex-row items-center lg:justify-between gap-8 sm:gap-10 lg:gap-2 px-2">
-        <Image
-          src={`/rices/rice1.png`}
-          alt="rice1"
-          width={1980}
-          height={1080}
-          className="lg:hover:flex-3 flex-1 lg:min-w-0 lg:w-100 relative lg:translate-y-2 duration-100 hover:scale-95 active:translate-y-px active:shadow-none shadow-[-8px_8px_0px_black] dark:shadow-[#f2eede] dark:opacity-80"
-        />
-        <Image
-          src={`/rices/rice3.png`}
-          alt="rice1"
-          width={1980}
-          height={1080}
-          className="lg:hover:flex-3 flex-1 lg:min-w-0 lg:w-100 relative lg:-translate-y-2 duration-100 hover:scale-95 dark:shadow-[#f2eede] dark:opacity-80 shadow-[0px_10px_0px_black] active:translate-y-px active:shadow-[0px_-10px_0px_black]"
-        />
-        <Image
-          src={`/rices/rice2.png`}
-          alt="rice1"
-          width={1980}
-          height={1080}
-          className="lg:hover:flex-3 flex-1 lg:min-w-0 lg:w-100 relative lg:translate-y-2 duration-100 hover:scale-95 dark:shadow-[#f2eede] dark:opacity-80 shadow-[10px_10px_0px_black] active:translate-y-1 active:shadow-none"
-        />
+      <h1 className="lg:text-2xl font-semibold mb-4 lg:mb-8">Linux journey:</h1>
+      <div className="">
+        <Tabs defaultValue="mint" className="w-full">
+          <TabsList className="w-full py-4 sm:py-7 px-1 sm:px-2 flex overflow-x-auto">
+            <TabsTrigger
+              className="cursor-pointer py-3 sm:py-5 text-sm sm:text-base lg:text-lg lg:font-semibold whitespace-nowrap"
+              value="mint"
+            >
+              Mint Xfce
+            </TabsTrigger>
+            <TabsTrigger
+              className="cursor-pointer py-3 sm:py-5 text-sm sm:text-base lg:text-lg lg:font-semibold whitespace-nowrap"
+              value="debianLight"
+            >
+              Light Debian
+            </TabsTrigger>
+            <TabsTrigger
+              className="cursor-pointer py-3 sm:py-5 text-sm sm:text-base lg:text-lg lg:font-semibold whitespace-nowrap"
+              value="debianDark"
+            >
+              Dark Debian{" "}
+              <span className="text-muted-foreground text-xs hidden sm:inline">
+                (current)
+              </span>
+            </TabsTrigger>
+          </TabsList>
+          <TabsContent value="mint">
+            <Carousel className="sm:mx-20">
+              <CarouselContent className="sm:p-10 gap-6 sm:gap-6 m-4 sm:mx-6">
+                <CarouselItem className="sm:p-4 sm:ring-4 border ring p-1 sm:border-4 hover:border-primary hover:ring-border hover:scale-98 duration-100 cursor-grab active:cursor-grabbing">
+                  <Image
+                    src={`/rices/mint-xfce/rice1.jpg`}
+                    alt="mint-xfce"
+                    width={1980}
+                    height={1080}
+                    className="border-4 hover:border-primary duration-100"
+                  />
+                </CarouselItem>
+              </CarouselContent>
+              <CarouselPrevious />
+              <CarouselNext />
+            </Carousel>
+          </TabsContent>
+          <TabsContent value="debianLight">
+            <Carousel className="sm:mx-20">
+              <CarouselContent className="sm:p-10 gap-6 sm:gap-6 m-4 sm:mx-6">
+                <CarouselItem className="sm:p-4 sm:ring-4 border ring p-1 sm:border-4 hover:border-primary hover:ring-border hover:scale-98 duration-100 cursor-grab active:cursor-grabbing">
+                  <Image
+                    src={`/rices/debian-light/rice1.png`}
+                    alt="mint-xfce"
+                    width={1980}
+                    height={1080}
+                    className="border-4 hover:border-primary duration-100"
+                  />
+                </CarouselItem>
+                <CarouselItem className="sm:p-4 sm:ring-4 border ring p-1 sm:border-4 hover:border-primary hover:ring-border hover:scale-98 duration-100 cursor-grab active:cursor-grabbing">
+                  <Image
+                    src={`/rices/debian-light/rice2.png`}
+                    alt="mint-xfce"
+                    width={1980}
+                    height={1080}
+                    className="border-4 hover:border-primary duration-100"
+                  />
+                </CarouselItem>
+                <CarouselItem className="sm:p-4 sm:ring-4 border ring p-1 sm:border-4 hover:border-primary hover:ring-border hover:scale-98 duration-100 cursor-grab active:cursor-grabbing">
+                  <Image
+                    src={`/rices/debian-light/rice3.png`}
+                    alt="mint-xfce"
+                    width={1980}
+                    height={1080}
+                    className="border-4 hover:border-primary duration-100"
+                  />
+                </CarouselItem>
+              </CarouselContent>
+              <CarouselPrevious />
+              <CarouselNext />
+            </Carousel>
+          </TabsContent>
+          <TabsContent value="debianDark">
+            <Carousel className="sm:mx-20">
+              <CarouselContent className="sm:p-10 gap-6 sm:gap-6 m-4 sm:mx-6">
+                <CarouselItem className="sm:p-4 sm:ring-4 border ring p-1 sm:border-4 hover:border-primary hover:ring-border hover:scale-98 duration-100 cursor-grab active:cursor-grabbing">
+                  <Image
+                    src={`/rices/debian-dark/rice1.png`}
+                    alt="mint-xfce"
+                    width={1980}
+                    height={1080}
+                    className="border-4 hover:border-primary duration-100"
+                  />
+                </CarouselItem>
+                <CarouselItem className="sm:p-4 sm:ring-4 border ring p-1 sm:border-4 hover:border-primary hover:ring-border hover:scale-98 duration-100 cursor-grab active:cursor-grabbing">
+                  <Image
+                    src={`/rices/debian-dark/rice2.png`}
+                    alt="mint-xfce"
+                    width={1980}
+                    height={1080}
+                    className="border-4 hover:border-primary duration-100"
+                  />
+                </CarouselItem>
+                <CarouselItem className="sm:p-4 sm:ring-4 border ring p-1 sm:border-4 hover:border-primary hover:ring-border hover:scale-98 duration-100 cursor-grab active:cursor-grabbing">
+                  <Image
+                    src={`/rices/debian-dark/rice3.png`}
+                    alt="mint-xfce"
+                    width={1980}
+                    height={1080}
+                    className="border-4 hover:border-primary duration-100"
+                  />
+                </CarouselItem>
+              </CarouselContent>
+              <CarouselPrevious />
+              <CarouselNext />
+            </Carousel>
+          </TabsContent>
+        </Tabs>
       </div>
-
-      <h1 className="lg:text-xl font-semibold text-lg mt-16 sm:mt-20 text-center ">
-        cool right. right???
-      </h1>
     </section>
   );
 }
