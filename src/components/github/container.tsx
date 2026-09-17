@@ -1,14 +1,13 @@
 "use client";
 import "react-activity-calendar/tooltips.css";
+import "./tooltip.css";
 import { Spinner } from "@/components/ui/spinner";
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import { Card, CardContent } from "@/components/ui/card";
 import { ActivityCalendar } from "react-activity-calendar";
 
-const LIGHT_COLORS = ["#2a2726", "#29443b", "#315e50", "#427565", "#5a8a82"];
-
-const DARK_COLORS = ["#2a2726", "#29443b", "#315e50", "#427565", "#5a8a82"];
+const COLORS = ["#111111", "#444444", "#777777", "#aaaaaa", "#ffffff"];
 
 type Activity = {
   date: string;
@@ -61,8 +60,8 @@ export default function GitHubContainer() {
               <ActivityCalendar
                 data={data}
                 theme={{
-                  light: LIGHT_COLORS,
-                  dark: DARK_COLORS,
+                  light: COLORS,
+                  dark: COLORS,
                 }}
                 colorScheme={resolvedTheme === "dark" ? "dark" : "light"}
                 tooltips={{
