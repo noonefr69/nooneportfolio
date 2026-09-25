@@ -2,10 +2,6 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
-* {
-    border-radius: 0px;
-}
-
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
