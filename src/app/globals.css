@@ -36,6 +36,7 @@
     --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
     --color-sidebar-border: var(--sidebar-border);
     --color-sidebar-ring: var(--sidebar-ring);
+
     --radius-sm: calc(var(--radius) * 0.6);
     --radius-md: calc(var(--radius) * 0.8);
     --radius-lg: var(--radius);
@@ -45,86 +46,169 @@
     --radius-4xl: calc(var(--radius) * 2.6);
 }
 
+/*
+ * GNOME HIG palette
+ *
+ * Blue 1  #99c1f1
+ * Blue 2  #62a0ea
+ * Blue 3  #3584e4
+ * Blue 4  #1c71d8
+ * Blue 5  #1a5fb4
+ *
+ * Green 1 #8ff0a4
+ * Green 2 #57e389
+ * Green 3 #33d17a
+ * Green 4 #2ec27e
+ * Green 5 #26a269
+ *
+ * Yellow 1 #f9f06b
+ * Yellow 2 #f8e45c
+ * Yellow 3 #f6d32d
+ * Yellow 4 #f5c211
+ * Yellow 5 #e5a50a
+ *
+ * Orange 1 #ffbe6f
+ * Orange 2 #ffa348
+ * Orange 3 #ff7800
+ * Orange 4 #e66100
+ * Orange 5 #c64600
+ *
+ * Red 1    #f66151
+ * Red 2    #ed333b
+ * Red 3    #e01b24
+ * Red 4    #c01c28
+ * Red 5    #a51d2d
+ *
+ * Purple 1 #dc8add
+ * Purple 2 #c061cb
+ * Purple 3 #9141ac
+ * Purple 4 #813d9c
+ * Purple 5 #613583
+ *
+ * Light 1  #ffffff
+ * Light 2  #f6f5f4
+ * Light 3  #deddda
+ * Light 4  #c0bfbc
+ * Light 5  #9a9996
+ *
+ * Dark 1   #77767b
+ * Dark 2   #5e5c64
+ * Dark 3   #3d3846
+ * Dark 4   #241f31
+ * Dark 5   #000000
+ */
+
 :root {
     --radius: 0.459rem;
-    --background: #000000;
-    --foreground: #ffffff;
-    --card: #111111;
-    --card-foreground: #ffffff;
-    --popover: #111111;
-    --popover-foreground: #ffffff;
-    --primary: #eeeeee;
-    --primary-foreground: #000000;
-    --secondary: #222222;
-    --secondary-foreground: #bbbbbb;
-    --muted: #111111;
-    --muted-foreground: #888888;
-    --accent: #333333;
-    --accent-foreground: #dddddd;
-    --destructive: #999999;
-    --border: #222222;
-    --input: #444444;
-    --ring: #cccccc;
-    --chart-1: #777777;
-    --chart-2: #999999;
-    --chart-3: #bbbbbb;
-    --chart-4: #dddddd;
-    --chart-5: #555555;
-    --sidebar: #111111;
-    --sidebar-foreground: #ffffff;
-    --sidebar-primary: #eeeeee;
-    --sidebar-primary-foreground: #000000;
-    --sidebar-accent: #333333;
-    --sidebar-accent-foreground: #dddddd;
-    --sidebar-border: #222222;
-    --sidebar-ring: #cccccc;
+
+    /* Base */
+    --background: #000000; /* Dark 5 */
+    --foreground: #ffffff; /* Light 1 */
+
+    /* Surfaces */
+    --card: #241f31; /* Dark 4 */
+    --card-foreground: #ffffff; /* Light 1 */
+    --popover: #241f31; /* Dark 4 */
+    --popover-foreground: #ffffff; /* Light 1 */
+
+    /* Actions */
+    --primary: #3584e4; /* Blue 3 */
+    --primary-foreground: #ffffff; /* Light 1 */
+
+    --secondary: #3d3846; /* Dark 3 */
+    --secondary-foreground: #f6f5f4; /* Light 2 */
+
+    /* Muted / accent */
+    --muted: #241f31; /* Dark 4 */
+    --muted-foreground: #9a9996; /* Light 5 */
+
+    --accent: #3d3846; /* Dark 3 */
+    --accent-foreground: #ffffff; /* Light 1 */
+
+    /* Status */
+    --destructive: #e01b24; /* Red 3 */
+
+    /* Controls */
+    --border: #3d3846; /* Dark 3 */
+    --input: #5e5c64; /* Dark 2 */
+    --ring: #62a0ea; /* Blue 2 */
+
+    /* Charts */
+    --chart-1: #3584e4; /* Blue 3 */
+    --chart-2: #33d17a; /* Green 3 */
+    --chart-3: #f6d32d; /* Yellow 3 */
+    --chart-4: #ff7800; /* Orange 3 */
+    --chart-5: #9141ac; /* Purple 3 */
+
+    /* Sidebar */
+    --sidebar: #241f31; /* Dark 4 */
+    --sidebar-foreground: #ffffff; /* Light 1 */
+    --sidebar-primary: #3584e4; /* Blue 3 */
+    --sidebar-primary-foreground: #ffffff; /* Light 1 */
+    --sidebar-accent: #3d3846; /* Dark 3 */
+    --sidebar-accent-foreground: #ffffff; /* Light 1 */
+    --sidebar-border: #3d3846; /* Dark 3 */
+    --sidebar-ring: #62a0ea; /* Blue 2 */
 }
 
 .dark {
-    --background: #000000;
-    --foreground: #ffffff;
-    --card: #111111;
-    --card-foreground: #ffffff;
-    --popover: #111111;
-    --popover-foreground: #ffffff;
-    --primary: #eeeeee;
-    --primary-foreground: #000000;
-    --secondary: #222222;
-    --secondary-foreground: #bbbbbb;
-    --muted: #111111;
-    --muted-foreground: #888888;
-    --accent: #333333;
-    --accent-foreground: #dddddd;
-    --destructive: #999999;
-    --border: #222222;
-    --input: #444444;
-    --ring: #cccccc;
-    --chart-1: #777777;
-    --chart-2: #999999;
-    --chart-3: #bbbbbb;
-    --chart-4: #dddddd;
-    --chart-5: #555555;
-    --sidebar: #111111;
-    --sidebar-foreground: #ffffff;
-    --sidebar-primary: #eeeeee;
-    --sidebar-primary-foreground: #000000;
-    --sidebar-accent: #333333;
-    --sidebar-accent-foreground: #dddddd;
-    --sidebar-border: #222222;
-    --sidebar-ring: #cccccc;
+    --background: #000000; /* Dark 5 */
+    --foreground: #ffffff; /* Light 1 */
+
+    --card: #241f31; /* Dark 4 */
+    --card-foreground: #ffffff; /* Light 1 */
+
+    --popover: #241f31; /* Dark 4 */
+    --popover-foreground: #ffffff; /* Light 1 */
+
+    --primary: #3584e4; /* Blue 3 */
+    --primary-foreground: #ffffff; /* Light 1 */
+
+    --secondary: #3d3846; /* Dark 3 */
+    --secondary-foreground: #f6f5f4; /* Light 2 */
+
+    --muted: #241f31; /* Dark 4 */
+    --muted-foreground: #9a9996; /* Light 5 */
+
+    --accent: #3d3846; /* Dark 3 */
+    --accent-foreground: #ffffff; /* Light 1 */
+
+    --destructive: #e01b24; /* Red 3 */
+
+    --border: #3d3846; /* Dark 3 */
+    --input: #5e5c64; /* Dark 2 */
+    --ring: #62a0ea; /* Blue 2 */
+
+    --chart-1: #3584e4; /* Blue 3 */
+    --chart-2: #33d17a; /* Green 3 */
+    --chart-3: #f6d32d; /* Yellow 3 */
+    --chart-4: #ff7800; /* Orange 3 */
+    --chart-5: #9141ac; /* Purple 3 */
+
+    --sidebar: #241f31; /* Dark 4 */
+    --sidebar-foreground: #ffffff; /* Light 1 */
+    --sidebar-primary: #3584e4; /* Blue 3 */
+    --sidebar-primary-foreground: #ffffff; /* Light 1 */
+    --sidebar-accent: #3d3846; /* Dark 3 */
+    --sidebar-accent-foreground: #ffffff; /* Light 1 */
+    --sidebar-border: #3d3846; /* Dark 3 */
+    --sidebar-ring: #62a0ea; /* Blue 2 */
 }
 
 @layer base {
     * {
         @apply border-border outline-ring/50;
     }
+
     body {
         @apply bg-background text-foreground;
     }
+
     html {
         @apply font-sans;
         scrollbar-width: none;
     }
+
     html::-webkit-scrollbar {
         display: none;
     }
@@ -132,6 +216,7 @@
     .hide-scrollbar {
         scrollbar-width: none;
     }
+
     .hide-scrollbar::-webkit-scrollbar {
         display: none;
     }
