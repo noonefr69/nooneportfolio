@@ -7,7 +7,7 @@ import { useTheme } from "next-themes";
 import { Card, CardContent } from "@/components/ui/card";
 import { ActivityCalendar } from "react-activity-calendar";
 
-const COLORS = ["#111111", "#444444", "#777777", "#aaaaaa", "#ffffff"];
+// const COLORS = ["#111111", "#444444", "#777777", "#aaaaaa", "#ffffff"];
 
 type Activity = {
   date: string;
@@ -60,8 +60,8 @@ export default function GitHubContainer() {
               <ActivityCalendar
                 data={data}
                 theme={{
-                  light: COLORS,
-                  dark: COLORS,
+                  light: ["#deddda", "#1a5fb4", "#1c71d8", "#3584e4", "#62a0ea"],
+                  dark: ["#241f31", "#1a5fb4", "#1c71d8", "#3584e4", "#99c1f1"],
                 }}
                 colorScheme={resolvedTheme === "dark" ? "dark" : "light"}
                 tooltips={{
